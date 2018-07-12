@@ -1,0 +1,12 @@
+table.table {
+    font-size: 0.8rem;
+
+    thead tr,
+    tfoot tr {
+        background: #00A1E6;
+        th, td {
+            color: #ffffff;
+            border-width: 0;
+        }
+    }
+}

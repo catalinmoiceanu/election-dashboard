@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+raw_data
+yarn.lock
+node_modules
+public

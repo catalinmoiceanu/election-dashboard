@@ -1,0 +1,16 @@
+.select {
+    select {
+        border: none;
+    }
+}
+
+.control {
+    &.has-icons-left {
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primary;
+        }
+    }
+}

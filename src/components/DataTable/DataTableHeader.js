@@ -2,13 +2,28 @@ import React, { Component } from 'react';
 
 export default class DataTableHeader extends Component
 {
+    getUnitName() {
+        let depth = this.props.request.getDepth();
+
+        if (depth > 7) {
+            return 'Sectie';
+        }
+
+        if (depth > 3) {
+            return 'Localitate';
+        }
+
+        if (depth > 1) {
+            return 'UAT';
+        }
+
+        return 'Judet';
+    }
     render () {
         return (
             <thead>
                 <tr>
-                    { this.props.isGeneral && <th>Judet</th> }
-                    { ! this.props.isGeneral && <th>Localitate</th> }
-                    { ! this.props.isGeneral && <th>Sectie</th> }
+                    <th>{ this.getUnitName() }</th>
                     <th>Votanti inregistrati</th>
                     <th>Total votanti</th>
                     <th>Prezenta (%)</th>

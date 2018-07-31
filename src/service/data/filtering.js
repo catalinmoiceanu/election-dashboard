@@ -1,0 +1,1 @@
+export const filterByCode = (array, code) => array.find(element => element.c === code);

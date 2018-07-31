@@ -7,7 +7,7 @@ export default class DataTableFooter extends Component
         return (
             <tfoot>
                 <tr>
-                    <td colSpan={this.props.isGeneral ? 1 : 2}>Total</td>
+                    <td>Total</td>
                     <td>{ numeral(this.props.totals.registered).format('0,0[.]00') }</td>
                     <td>{ numeral(this.props.totals.votes).format('0,0[.]00') }</td>
                     <td>{ numeral(this.props.totals.presence).format('0,0[.]00') }</td>

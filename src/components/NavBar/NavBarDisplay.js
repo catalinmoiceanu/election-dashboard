@@ -17,7 +17,7 @@ export default class NavBarDisplay extends Component
                 <div className='control has-icons-left'>
                     <span className='select is-small'>
                         <select onChange={this.onSelectView.bind(this)} value={getView(this.props.match)}>
-                            { getOptions(views) }
+                            { getOptions(getViews()) }
                         </select>
                     </span>
                     <span className='icon is-small is-left'>
@@ -29,7 +29,9 @@ export default class NavBarDisplay extends Component
     }
 }
 
-const views = {
-    table: 'Tabel',
-    graph: 'Grafic'
+const getViews = () => {
+    let views = new Map();
+    views.set('table', 'Tabel');
+    views.set('graph', 'Grafic');
+    return views;
 };

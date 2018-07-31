@@ -5,15 +5,14 @@ export default class DataTableBody extends Component
 {
     getRows() {
         let rows = [];
-        for (let key in this.props.precincts) {
-            rows.push(this.getRow(key, this.props.precincts[key]));
+        for (let key in this.props.dataset) {
+            rows.push(this.getRow(key, this.props.dataset[key]));
         }
         return rows;
     }
 
     getRow(key, unit) {
         return <tr key={ key }>
-            { ! this.props.isGeneral && <td>{ unit.pn }</td> }
             <td style={{maxWidth: '25rem'}}>{ unit.n }</td>
             <td>{ numeral(unit.res.r).format('0,0[.]00') }</td>
             <td>{ numeral(unit.res.t).format('0,0[.]00') }</td>

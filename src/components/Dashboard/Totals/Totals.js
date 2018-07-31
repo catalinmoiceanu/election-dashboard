@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import numeral from "numeral";
 
-export default class DashboardTotals extends Component
+export default class Totals extends Component
 {
-
     render () {
         let totals = this.props.totals;
         return (
-            <div className="dashboard-totals level">
+            <div className="dashboard-totals level container">
                 <div className="level-item has-text-centered">
                     <div>
                         <p className="heading">Persoane pe liste</p>

@@ -67,7 +67,7 @@ export default class Widget extends Component
     render () {
         this.getObject();
         return (
-            this.props.precincts ? this.getObject() : <h1>Loading...</h1>
+            this.props.dataset.precincts ? this.getObject() : <h1>Loading...</h1>
         )
     }
 }

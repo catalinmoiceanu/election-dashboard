@@ -22,19 +22,19 @@ export const getUrlForView = (routerMatch, view, currentPath) => {
 };
 
 export const getUrlForType = (routerMatch, type, currentPath) => {
-    return getUrl(routerMatch, { type, region: null, division: null, town: null }, currentPath);
+    return getUrl(routerMatch, { type, region: null, division: null, precinct: null }, currentPath);
 };
 
 export const getUrlForRegion = (routerMatch, region, currentPath) => {
-    return getUrl(routerMatch, { region, division: null, town: null }, currentPath);
+    return getUrl(routerMatch, { region, division: null, precinct: null }, currentPath);
 };
 
 export const getUrlForDivision = (routerMatch, division, currentPath) => {
-    return getUrl(routerMatch, { division, town: null }, currentPath);
+    return getUrl(routerMatch, { division, precinct: null }, currentPath);
 };
 
-export const getUrlForTown = (routerMatch, town, currentPath) => {
-    return getUrl(routerMatch, { town }, currentPath);
+export const getUrlForPrecinct = (routerMatch, town, currentPath) => {
+    return getUrl(routerMatch, { precinct }, currentPath);
 };
 
 export const getType = (routerMatch) => {

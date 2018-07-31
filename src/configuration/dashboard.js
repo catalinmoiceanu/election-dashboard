@@ -35,7 +35,7 @@ export const DashboardConfiguration = () => {
                     },
                     {
                         type: 'line',
-                        labels: getAgeRange(18,120),
+                        labels: getAgeRange(18,95),
                         keys: ['male_votes_by_age', 'female_votes_by_age'],
                         label: ['Barbati', 'Femei'],
                         forcedLabel: 'Impartirea pe varsta si gen',

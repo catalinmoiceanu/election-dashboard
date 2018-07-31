@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
 import { TableView, GraphView }  from '../View';
-import DashboardTotals from './DashboardTotals';
-import { DashboardConfiguration } from '../../configuration/dashboard';
+import TotalsWrapper from './Totals/TotalsWrapper';
 
 export default class Dashboard extends Component
 {
-    constructor(props) {
-        super(props);
-        this.state = {
-            config: DashboardConfiguration()
-        };
-    }
-
-    isGraph() {
-        return this.props.route.params && this.props.route.params.view === 'graph';
-    }
-
     render () {
         return (
             <React.Fragment>
-                <DashboardTotals totals={this.props.totals} />
-                { this.isGraph()
-                    ? <GraphView {...this.props} config={this.state.config.view.graph} />
-                    : <TableView {...this.props} config={this.state.config.view.table} /> }
+                <TotalsWrapper {...this.props} />
+                { this.props.request.isGraph()
+                    ? <GraphView {...this.props} config={this.props.config.view.graph} />
+                    : <TableView {...this.props} config={this.props.config.view.table} /> }
             </React.Fragment>
         )
     }
